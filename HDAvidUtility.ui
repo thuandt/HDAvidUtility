@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HDAvidUtility</class>
+ <widget class="QMainWindow" name="HDAvidUtility">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>131</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HD Avid Utility</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="HDAvidUtility.qrc">
+    <normaloff>:/icons/mxf.png</normaloff>:/icons/mxf.png</iconset>
+  </property>
+  <widget class="QWidget" name="mainCentralWidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>341</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="mainGridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="inputLabel">
+       <property name="text">
+        <string>Input Folder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="inputLineEdit"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="QToolButton" name="inputBrowse">
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="startButton">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="HDAvidUtility.qrc">
+         <normaloff>:/icons/start.png</normaloff>:/icons/start.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="outputLabel">
+       <property name="text">
+        <string>Output Folder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="outputLineEdit"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QToolButton" name="outputBrowse">
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="outputFormatLabel">
+       <property name="text">
+        <string>Output Format</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QComboBox" name="outputFormatComboBox">
+       <item>
+        <property name="text">
+         <string>IMX30</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>IMX40</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>IMX50</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="stopButton">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="HDAvidUtility.qrc">
+         <normaloff>:/icons/stop.png</normaloff>:/icons/stop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="HDAvidUtility.qrc">
+     <normaloff>:/icons/start.png</normaloff>:/icons/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bắt đầu</string>
+   </property>
+   <property name="toolTip">
+    <string>Bắt đầu</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="HDAvidUtility.qrc">
+     <normaloff>:/icons/stop.png</normaloff>:/icons/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Kết thúc</string>
+   </property>
+   <property name="toolTip">
+    <string>Kết thúc</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionOpenMainWindow">
+   <property name="icon">
+    <iconset resource="HDAvidUtility.qrc">
+     <normaloff>:/icons/mxf.png</normaloff>:/icons/mxf.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mở cửa sổ chính</string>
+   </property>
+   <property name="toolTip">
+    <string>Mở cửa sổ chính</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="HDAvidUtility.qrc">
+     <normaloff>:/icons/exit.png</normaloff>:/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Thoát</string>
+   </property>
+   <property name="toolTip">
+    <string>Thoát</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>inputBrowse</tabstop>
+  <tabstop>outputBrowse</tabstop>
+  <tabstop>outputFormatComboBox</tabstop>
+  <tabstop>inputLineEdit</tabstop>
+  <tabstop>outputLineEdit</tabstop>
+  <tabstop>startButton</tabstop>
+  <tabstop>stopButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="HDAvidUtility.qrc"/>
+ </resources>
+ <connections/>
+</ui>
